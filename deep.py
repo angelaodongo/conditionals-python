@@ -1,5 +1,5 @@
 def answer(q):
-    if q == "42" or q == "forty-two" or q == "forty two":
+    if q in ["42", "forty-two", "forty two"]:
         return "Yes"
     else:
         return "No"
