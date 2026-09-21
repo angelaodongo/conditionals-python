@@ -1,16 +1,12 @@
 def answer(q):
-    if q == "42":
-        return "Yes"
-    elif q == "forty-two":
-        return "Yes"
-    elif q == "forty two":
+    if q == "42" or q == "forty-two" or q == "forty two":
         return "Yes"
     else:
         return "No"
 
 
 def main():
-    question = input("What is the answer to the Great Question of Life, the Universe and Everything? ")
+    question = input("What is the answer to the Great Question of Life, the Universe and Everything? ").strip().lower()
     print(answer(question))
 
 main()
