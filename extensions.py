@@ -31,7 +31,7 @@ def prog_name(p):
             
                 
 def main():
-    program = input("What's the name of your file? ").lower().split('.')
+    program = input("What's the name of your file? ").lower().split('.')[-1]
     print(prog_name(program))
 
 main()
