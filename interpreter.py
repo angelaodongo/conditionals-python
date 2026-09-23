@@ -20,11 +20,12 @@ def interpret(e):
             return x - z
         case "*":
             return x * z
-        case "z":
-            return x / z
+        case "/":
+                return x / z
 
 def main():
     expression = input("Expression: ")
-    print(interpret(expression))
+    result = interpret(expression)
+    print(f"{result:.1f}")
 
 main()
