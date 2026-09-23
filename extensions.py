@@ -12,19 +12,19 @@
 
 def prog_name(p):
     match p:
-        case p.endswith(".gif"):
+        case "gif":
             return "image"
-        case p.endswith(".jpg"):
+        case "jpg":
             return "image"
-        case p.endswith(".jpeg"):
+        case "jpeg":
             return "image"
-        case p.endswith(".png"):
+        case "png":
             return "image"
-        case p.endswith(".pdf"):
+        case "pdf":
             return "document"
-        case p.endswith(".txt"):
+        case "txt":
             return "text file"
-        case p.endswith(".zip"):
+        case "zip":
             return "ZIP folder"
         case _:
             return "application/octet-stream"
