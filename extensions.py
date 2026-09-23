@@ -13,27 +13,25 @@
 def prog_name(p):
     match p:
         case p.endswith(".gif"):
-            return "Image/GIF"
+            return "image"
         case p.endswith(".jpg"):
-            return "Image/GIF"
+            return "image"
         case p.endswith(".jpeg"):
-            return "Image/GIF"
+            return "image"
         case p.endswith(".png"):
-            return "Image/GIF"
+            return "image"
         case p.endswith(".pdf"):
-            return "Document"
+            return "document"
         case p.endswith(".txt"):
-            return "Text File"
+            return "text file"
         case p.endswith(".zip"):
-            return "ZIP Folder"
-        case p.endswith(".gif"):
-            return "Image/GIF"
+            return "ZIP folder"
         case _:
             return "application/octet-stream"
             
                 
 def main():
-    program = input("What's the name of your file? ")
+    program = input("What's the name of your file? ").lower().split('.')
     print(prog_name(program))
 
 main()
