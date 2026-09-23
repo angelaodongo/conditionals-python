@@ -5,9 +5,9 @@
 """
 
 def salutation(g):
-    if g == "hello":
+    if g.startswith("hello"):
         return "$0"
-    elif g.startswith("h") and g != "hello":
+    elif g.startswith("h"):
         return "$20"
     else:
         return "$100"
