@@ -25,9 +25,19 @@ def main():
 
 def convert(time):
     parts = time.split(':')
-    
+
     y = int(parts[0])
     z = int(parts[1])
 
     convertZ = z / 60
-    return y + convertZ
+    convertedTime = y + convertZ
+    return convertedTime
+
+    if 7 <= convertedTime <= 8:
+        return "Breakfast"
+    elif 12 <= convertedTime <= 13:
+        return "Lunch"
+    elif 18 <= convertedTime <= 19:
+        return "Dinner"
+
+main()
