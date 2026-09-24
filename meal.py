@@ -38,5 +38,5 @@ def convert(time):
     currentTime = y + convertZ
     return currentTime
 
-if __name__ == "__main":
+if __name__ == "__main__":
     main()
