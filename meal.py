@@ -6,7 +6,7 @@
     And assume that each meal's time range is inclusive. 
     For instance, whether it's 7:00, 7:01, 7:59, or 8:00, or anytime in between, it's time for breakfast.
     Structure your program per the below, wherein convert is a function (that can be called by main) that converts time, a str in 24-hour format, to the corresponding number of hours as a float. 
-    For instance, given a time like "7:30" (i.e., 7 hours and 30 minutes), convert should return 7.5 (i.e., 7.5 hours).
+    For instance, given a time like "7:30" (i.e., 7 hours and 30 minutes), convert should print (7.5 (i.e., 7.5 hours).)
 
     def main():
     ...
@@ -21,7 +21,12 @@
 def main():
     t = input("What's the time? ")
     currentTime = convert(t)
-    print(currentTime)
+    if 7 <= currentTime <= 8:
+        print("Breakfast")
+    elif 12 <= currentTime <= 13:
+        print("Lunch")
+    elif 18 <= currentTime <= 19:
+        print("Dinner")
 
 def convert(time):
     parts = time.split(':')
@@ -30,13 +35,8 @@ def convert(time):
     z = int(parts[1])
 
     convertZ = z / 60
-    convertedTime = y + convertZ
+    currentTime = y + convertZ
+    return currentTime
 
-    if 7 <= convertedTime <= 8:
-        return "Breakfast"
-    elif 12 <= convertedTime <= 13:
-        return "Lunch"
-    elif 18 <= convertedTime <= 19:
-        return "Dinner"
-
-main()
+if __name__ == "__main":
+    main()
