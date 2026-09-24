@@ -31,7 +31,6 @@ def convert(time):
 
     convertZ = z / 60
     convertedTime = y + convertZ
-    return convertedTime
 
     if 7 <= convertedTime <= 8:
         return "Breakfast"
